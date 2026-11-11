@@ -1,3 +1,8 @@
+// The tooltip content is force-mounted, so its (invisible) popper wrapper must never intercept pointer events
+[data-reka-popper-content-wrapper]:has(> .tooltip) {
+	pointer-events: none;
+}
+
 .tooltip {
 	--tooltip-foreground-color: var(--foreground-inverted);
 	--tooltip-background-color: var(--background-inverted);
